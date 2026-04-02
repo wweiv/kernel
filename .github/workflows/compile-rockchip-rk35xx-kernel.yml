@@ -75,7 +75,6 @@ on:
         type: choice
         options:
           - -rk35xx-ophub
-          - -rk35xx-ophub
           - -happy-new-year
           - -dragon-boat-festival
           - -mid-autumn-festival
@@ -194,7 +193,7 @@ jobs:
           kernel_config: ${{ inputs.kernel_config }}
           ccache_clear: ${{ inputs.ccache_clear }}
           docker_hostpath: /builder
-          docker_image: ophub/armbian-${{ inputs.docker_image }}:arm64
+          docker_image: wweiv/armbian-${{ inputs.docker_image }}:arm64
 
       - name: Upload Kernel to Release
         uses: ncipollo/release-action@main
